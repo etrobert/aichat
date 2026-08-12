@@ -315,3 +315,18 @@ clients:
     name: voyageai
     api_base: https://api.voyageai.com/v1
     api_key: xxx
+
+  # Backed by a local command rather than an HTTP API. The prompt is written to
+  # the command's stdin unless an arg contains {prompt}; the reply is its stdout.
+  # {model} and {system} are substituted too.
+  - type: command
+    name: claude
+    command: claude
+    args:
+      - --print
+      - --model
+      - "{model}"
+      - --append-system-prompt
+      - "{system}"
+    models:
+      - name: haiku

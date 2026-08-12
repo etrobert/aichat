@@ -31,6 +31,7 @@ register_client!(
     ),
     (vertexai, "vertexai", VertexAIConfig, VertexAIClient),
     (bedrock, "bedrock", BedrockConfig, BedrockClient),
+    (command, "command", CommandConfig, CommandClient),
 );
 
 pub const OPENAI_COMPATIBLE_PROVIDERS: [(&str, &str); 18] = [
