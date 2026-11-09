@@ -30,6 +30,8 @@
             pkgs.installShellFiles
           ];
 
+          buildInputs = [ pkgs.oniguruma ];
+
           postInstall = ''
             installShellCompletion --cmd aichat \
               --bash scripts/completions/aichat.bash \
